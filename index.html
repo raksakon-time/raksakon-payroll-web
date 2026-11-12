@@ -190,7 +190,7 @@ table{font-size:12px}th{padding:6px 4px}td{padding:6px 5px;word-break:break-word
     <button class="btn filled" id="bLogin">เข้าสู่ระบบ</button>
     <button class="link" id="bForgot">ลืมรหัสผ่าน?</button>
     <button class="link" id="bAdminOpen" style="color:var(--mut)"><span class="ms" style="font-size:14px;vertical-align:middle">settings</span> สำหรับผู้ดูแลระบบ</button>
-    <div class="credit"><span class="ms" style="font-size:14px;vertical-align:middle;color:#2E9E6B">verified_user</span> การเชื่อมต่อปลอดภัย · ข้อมูลเป็นความลับ</div>
+    <div class="credit"><span class="ms" style="font-size:14px;vertical-align:middle;color:#2E9E6B">verified_user</span> การเชื่อมต่อปลอดภัย · ข้อมูลเป็นความลับ<br>พัฒนาระบบโดย @นายประกิจจา ดวงสุภา HRM 042712800</div>
   </section>
 </div>
 
@@ -373,7 +373,7 @@ const $ = id => document.getElementById(id);
 const T = 'ม.ค.,ก.พ.,มี.ค.,เม.ย.,พ.ค.,มิ.ย.,ก.ค.,ส.ค.,ก.ย.,ต.ค.,พ.ย.,ธ.ค.'.split(',');
 const DEF = 'เลือกไฟล์ Excel (.xlsx, .xls, .csv)';
 // โหมดคู่: อยู่ใน Apps Script ใช้ google.script.run / โฮสต์ที่อื่น (GitHub Pages) เรียก Web app ผ่าน fetch
-const API_URL = '__API_URL__'; // <<< แก้ตรงนี้: แทนที่คำว่า __API_URL__ ด้วย Web app URL ของ Apps Script (ลงท้าย /exec) เก็บเครื่องหมาย ' ไว้
+const API_URL = 'https://script.google.com/macros/s/AKfycbwFyXat0o1qM1QtqwB31VWK4cv0_qjj6qHRx-JoXoiJmLQQpG9gjtQ8gdtvhvXR1cVksQ/exec'; // GitHub Actions แทนที่ค่านี้ตอน build จาก Repository variable ชื่อ API_URL
 const inGAS = typeof google !== 'undefined' && google.script && google.script.run;
 async function api(fn, args) {
   if (!/^https:/.test(API_URL)) throw new Error('ยังไม่ได้ตั้งค่า API_URL ของเว็บแอป');
